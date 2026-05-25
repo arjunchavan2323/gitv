@@ -1,0 +1,23 @@
+
+
+
+<mat-card class="mt-3">
+    <mat-card-title>
+    <h1>{{product.pName}}</h1>
+    </mat-card-title>
+    <mat-card-content>
+        <p>{{product.Pdetail}}
+           
+        </p>
+         <strong>{{product.pStatus}}</strong>
+       
+    </mat-card-content>
+    <mat-card-actions>
+        <p>
+            <button mat-raised-button color="primary" (click)="onpstatuschange(product.pId, Allstoreenum.Inprogress)">Inprogress</button>
+            <button mat-raised-button color="accent" (click)="onpstatuschange(product.pId, Allstoreenum.Dispatch)">Dispatch</button>
+            <button mat-raised-button color="warn" (click)="onpstatuschange(product.pId, Allstoreenum.Delivered)">Delivered</button>
+
+        </p>
+    </mat-card-actions>
+</mat-card>
